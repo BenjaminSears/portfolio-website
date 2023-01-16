@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href='/staticFiles/nav.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body id=#" class="magma">
+    <nav class="container">
+        <a class="toggleBox">
+            <span class="icon"> </span>
+        </a>
+        <ul class="navItems">
+            <li>
+                <a href="#home">
+                    <i class="fa fa-home fa-2x" style="--i:1"> </i>
+                    <span style="--g:1"> Home </span>
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    <i class="fa fa-user fa-2x" style="--i:2"> </i>
+                    <span style="--g:2"> About </span>
+                </a>
+            </li>
+            <li>
+                <a href="#experience">
+                    <i class="fa fa-folder fa-2x" style="--i:3"> </i>
+                    <span style="--g:3"> Experience </span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    <i class="fa fa-phone fa-2x" style="--i:4"> </i>
+                    <span style="--g:4"> Contact </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+<script>
+        var toggleClick = document.querySelector(".toggleBox");
+        var container = document.querySelector(".container");
+        toggleClick.addEventListener('click', ()=> {
+            toggleClick.classList.toggle('active');
+            container.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
